@@ -2,9 +2,9 @@ const SOCIALS = new Map([
     ['youtube', 'https://www.youtube.com/@cattyngmd'],
     ['github', 'https://github.com/cattyngmd'],
     ['telegram', 'https://cattyn.t.me/']
-])
+]);
 
-const WAVE_PATTERN = "⋆⭒˚."
+const WAVE_PATTERN = "⋆⭒˚.";
 const WAVE_LEN = 33;
 
 const BIRTHDAY = 1159905600000;
@@ -15,13 +15,13 @@ const main = () => {
     $('bio').innerText = $('bio').innerText.replace("%age%", yearPassed(BIRTHDAY))
 
     setInterval(() => {
-        let localoffset = 0
+        let localoffset = 0;
         let str = '';
         for (let i = 0; i < WAVE_LEN; i++) {
             if (i == Math.floor(WAVE_LEN / 2)) {
                 str += '$';
                 localoffset += 'cattyn'.length;
-                continue
+                continue;
             }
             str += WAVE_PATTERN[(i + offset + localoffset) % WAVE_PATTERN.length]
         }
@@ -46,7 +46,7 @@ const yearPassed = (day) => {
 }
 
 const $ = (id) => {
-    return document.getElementById(id)
+    return document.getElementById(id);
 }
 
-document.addEventListener('DOMContentLoaded', main)
+document.addEventListener('DOMContentLoaded', main);
