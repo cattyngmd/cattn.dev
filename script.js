@@ -1,8 +1,8 @@
-const SOCIALS = new Map([
-    ['youtube', 'https://www.youtube.com/@cattyngmd'],
-    ['github', 'https://github.com/cattyngmd'],
-    ['telegram', 'https://cattyn.t.me/']
-]);
+const SOCIALS = {
+    youtube:    'https://www.youtube.com/@cattyngmd',
+    github:     'https://github.com/cattyngmd',
+    telegram:   'https://cattyn.t.me/'
+}
 
 const WAVE_PATTERN = "⋆⭒˚.";
 const WAVE_LEN = 33;
@@ -35,7 +35,7 @@ const main = () => {
 
 const onSocialClick = (e) => {
     let clicked = e.target.innerText;
-    let url = SOCIALS.get(clicked);
+    let url = SOCIALS[clicked];
     window.location.href = url;
 }
 
