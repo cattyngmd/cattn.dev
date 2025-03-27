@@ -12,8 +12,6 @@ const BIRTHDAY = 1159905600000;
 let offset = 0;
 
 const main = () => {
-    $('bio').innerText = $('bio').innerText.replace("%age%", yearPassed(BIRTHDAY))
-
     setInterval(() => {
         let localoffset = 0;
         let str = '';
