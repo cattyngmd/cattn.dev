@@ -12,7 +12,12 @@ const BIRTHDAY = 1159905600000;
 let offset = 0;
 
 const main = () => {
-    setInterval(() => {
+    animation();
+    setInterval(animation, 150);
+    setTimeout(() => $("main").style.opacity = "1.0", 150);
+}
+
+const animation = () => {
         let localoffset = 0;
         let str = '';
         for (let i = 0; i < WAVE_LEN; i++) {
@@ -28,7 +33,6 @@ const main = () => {
         $('prefix').innerHTML = split[0];
         $('suffix').innerHTML = split[1];
         offset++
-    }, 150);
 }
 
 const onSocialClick = (e) => {

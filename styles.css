@@ -17,6 +17,8 @@ h2 {
     align-items: center;
     justify-content: center;
     margin-top: 8rem;
+    opacity: 0.0;
+    transition: opacity 750ms ease-out;
 }
 
 .box > * {
@@ -46,6 +48,7 @@ h2 {
 .title {
     display: flex;
     align-items: center;
+    text-align: center;
 }
 
 .title * {
@@ -58,5 +61,4 @@ h2 {
 
 .wave {
     min-width: 172px;
-    margin-left: 22px;
 }
